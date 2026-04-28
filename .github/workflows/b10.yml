@@ -14,4 +14,4 @@ jobs:
         run: expr 10 + 20
 
       - name: check os info of the runner
-        run: cat/etc/os-release
+        
