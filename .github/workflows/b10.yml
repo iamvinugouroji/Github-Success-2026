@@ -8,3 +8,10 @@ jobs:
     steps:
       - name: Print a message
         run: echo "Hello, this is my first workflow!"
+
+
+      - name: do this calculations
+        run: expr 10 + 20
+
+      - name: check os info of the runner
+        run: cat/etc/os-release
