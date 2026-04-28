@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print a message
-        run: echo "Hello b17 this is my first workflow"
+        run: echo "Hello, this is my first workflow!"
