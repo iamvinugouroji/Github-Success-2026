@@ -13,12 +13,12 @@ jobs:
         run  : |
           cd Github-Success-2026 
           ls -la
-
-      - name : running the script
-        run : |
-            chmod +x new.sh
+          chmod +x new.sh
             ./new.sh
             
+
+
+      
 
 
 
