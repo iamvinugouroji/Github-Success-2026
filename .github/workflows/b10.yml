@@ -1,22 +1,22 @@
 name: Myfirstworkflow
 
-on: push
+on:
+  push
 
 jobs:
   firstjob:
     runs-on: ubuntu-latest
+
     steps:
       - name: putting code on runner
-        run : git clone https://github.com/iamvinugouroji/Github-Success-2026.git
+        run: git clone https://github.com/iamvinugouroji/Github-Success-2026.git
 
-      - name : cheking the code
-        run  : |
-          cd Github-Success-2026 
+      - name: checking the code
+        run: |
+          cd Github-Success-2026
           ls -la
           chmod +x new.sh
-            ./new.sh
-            
-
+          ./new.sh
 
       
 
