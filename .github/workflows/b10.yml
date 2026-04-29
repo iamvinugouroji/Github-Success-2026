@@ -1,6 +1,7 @@
 name: Myfirstworkflow
 
-on: push
+on: 
+ push
 
 jobs:
   firstjob:
