@@ -13,13 +13,10 @@ jobs:
 
       - name: checking the code
         run: |
-          cd Github-Success-2026
-          ls -la
-          chmod +x new.sh
-          ./new.sh
-
+              cd Github-Success-2026
+               chmod +x scripts/new.sh
+              ./scripts/new.sh
       
-
 
 
     

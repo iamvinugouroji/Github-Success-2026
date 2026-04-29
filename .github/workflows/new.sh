@@ -1,1 +1,1 @@
-echo "Hello, some automation script"
+echo "Hello some automation script"
