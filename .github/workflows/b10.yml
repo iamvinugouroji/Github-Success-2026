@@ -14,7 +14,7 @@ jobs:
       - name: build and push docker image
         run: |
               cd Github-Success-2026
-              docker buuld -t mynewimage:latest .
+              docker build -t mynewimage:latest .
                
 
       - name: login to docker hub
