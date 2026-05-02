@@ -1,22 +1,27 @@
-name: Myfirstworkflow
+name: Build and Test
 
-on: 
- push
+on: workflow_dispatch
+ 
 
 jobs:
-  firstjob:
+  buildandpush:
     runs-on: ubuntu-latest
 
     steps:
       - name: putting code on runner
         run: git clone https://github.com/iamvinugouroji/Github-Success-2026.git
 
-      - name: checking the code
+      - name: build and push docker image
         run: |
               cd Github-Success-2026
-               chmod +x scripts/new.sh
-              ./scripts/new.sh
-      
+              docker buuld -t mynewimage:latest .
+               
 
-
+      - name: login to docker hub
+        run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
     
+
+      - name: tag and push docker image
+        run: |
+              docker tag mynewimage:latest ${{ secrets.DOCKER_HUB_USERNAME }}/mynewimage:latest
+              docker push ${{ secrets.DOCKER_HUB_USERNAME }}/mynewimage:latest
